@@ -54,3 +54,11 @@ c被打印出来，编译显示\c是unknown escape sequence
 ## 练习1-12 每行一个单词打印其输入
 
 ./wordPrint.c
+
+## 练习1-13 打印输入单词长度的直方图，垂直+水平
+
+./wordLength.c
+
+## 练习1-14 打印各个字符出现频度的直方图，水平
+
+./charFrequency.c
