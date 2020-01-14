@@ -62,3 +62,23 @@ c被打印出来，编译显示\c是unknown escape sequence
 ## 练习1-14 打印各个字符出现频度的直方图，水平
 
 ./charFrequency.c
+
+## 练习1-15 函数实现温度转换计算
+
+./fahr2CelsiusWithFunc.c
+
+## 练习1-16 打印任意长的输入行，尽可能多打印文本
+
+./textPrint.c
+
+## 练习1-17 打印长度大于80的输入行
+
+./over80.c
+
+## 练习1-18 删除每个行末尾的空格和制表符，忽略完全是空格的行
+
+./rightTrim.c
+
+## 练习1-19 编写reverse(s)，将字符串s字符顺序颠倒过来，颠倒字符顺序
+
+./reverse.c
