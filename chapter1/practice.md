@@ -82,3 +82,11 @@ c被打印出来，编译显示\c是unknown escape sequence
 ## 练习1-19 编写reverse(s)，将字符串s字符顺序颠倒过来，颠倒字符顺序
 
 ./reverse.c
+
+## 练习1-20 detab，将\t改为数个空格，不超过制表符终止位
+
+./detab.c
+
+## 练习1-21 entab，将数个空格改为最少数量的tab和空格，答案重点在于位置，没有规定tab所占的空格位置
+
+./entab.c
