@@ -129,6 +129,107 @@ expr1 = (expr1) op (expr2)
 
 ## 第3章 控制流
 
+> 程序语言中的控制流语句用于控制各计算机操作执行的次序
+
+### 语句与程序块
+
+分号是语句结束符，表达式后加上一个分号，就变成了*语句*
+
+用一对花括号`{}`把一组声明和语句括在一起就构成了一个*复合语句*（程序块），复合语句在语法上等价于单条语句，右花括号用于结束程序块，其后不需要分号
+
+### if-else语句
+
+```c
+if (expression)
+    statement1
+else
+    statement2
+```
+
+表达式为真（值非0）执行`statement1`，值为假（值为0）且该语句包含else部分，执行`statement2`
+
+有`if`语句嵌套的情况下使用花括号
+
+### else-if语句
+
+```c
+if (expression)
+    statement
+else if (expression)
+    statement
+else
+    statement
+```
+
+这种`if`语句序列是编写多路判定最常用的方法
+
+### switch语句
+
+```c
+switch (expression) {
+    case CONSTANT: statements
+    case CONSTANT: statements
+    default: statements
+}
+```
+
+`switch`语句是一种多路判定语句，它测试表达式是否与一些常量整数值中的某个匹配，并执行相应的分支动作
+
+作为一种良好的程序设计风格，在`switch`语句最后一个分支的后面加上一个`break`语句
+
+### while循环和for循环
+
+```c
+while (expression)
+    statement
+
+for (expression1; expression2; expression3)
+    statement
+
+for <=> while:
+
+expression1;
+while(expression2) {
+    statement;
+    expression3;
+}
+```
+
+从语法角度看，`for`循环语句的3个组成部分都是表达式。常见情况是`expression1`和`expression3`是赋值表达式或函数调用，`expression2`是关系表达式。这3个组成部分中的任何部分都可以省略，但是分号不能省略
+
+`,`运算符也是C语言中优先级最低的运算符。被逗号分隔的一对表达式将按照从左到右的顺序进行求值，各表达式右边的操作数的类型和值即为其结果的类型和值
+
+### do-while循环
+
+```c
+do
+    statement
+while (expression);
+```
+
+### break语句和continue语句
+
+`continue`语句的执行意味着立即执行测试部分，在`for`循环中，则意味着使控制转移到递增循环变量部分
+
+### goto语句和标号
+
+`goto`最常见的用法是终止程序在某些深度嵌套的结构中的处理过程
+
+```c
+for (;;)
+    for (;;) {
+        if (disaster)
+            goto error;
+    }
+
+error:
+    statements;
+```
+
+标号的命名同变量命名的形式相同，标号的后面要紧跟一个冒号，标号可以位于对应的`goto`语句所在函数的任何语句的前面。标号的作用域是整个函数
+
+> 尽可能少地使用goto语句
+
 ## 第4章 函数与程序结构
 
 ## 第5章 指针与数组
